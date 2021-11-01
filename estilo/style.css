@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face{
+    font-family: 'Android';
+    src:url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root{
+    --cor0: #FFE7AD;
+    --cor1: #f09e05;
+    --cor2: #7A5600;
+    --cor3: #523A00;
+    --cor4: #00B4D8;
+    --cor5: #003D52;
+    --cor6: #03045E;
+
+    --font-padrao: Arial, verdana, Helvetica, sans-serif;
+    --font-destaque: 'Bebas neue', cursive;
+    --font-android: 'Android', cursive;
+}
+   /* CONFIGURAÇÕES GLOBAIS*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font-padrao);
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;    
+}
+/* FIM DAS CONFIG.*/
+
+/*config. header*/
+header{
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height: 130px;
+    text-align: center;
+    padding-top: 30px;
+   
+}
+
+header > h1{
+    font-size: 3em;
+    color:white;
+    margin-bottom: 10px;
+    font-family: var(--font-destaque);
+    text-shadow:0px 9px 4px rgba(0, 0, 0, 0.473);
+      
+}
+header >p{
+    font-family: var(--font-padrao);
+    color: white;
+    font-size: 1.5em;
+    max-width: 700px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto; 
+    text-shadow:8px 4px 1px rgba(0, 0, 0, 0.274);
+}
+
+/* fim do header*/
+
+
+/* CONFIG. MENU NAVEGAÇÃO*/
+nav{
+    background-color: var(--cor6);
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.11);
+
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration:1s ;
+}
+
+nav > a:hover{
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 10px;
+
+}
+/*fim do nav*/
+
+
+/*CONFIG. MAIN*/
+main{
+    background-color: white;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+    min-width: 260px;
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+}
+
+main  h1{
+    color: var(--cor4);
+    font-family: var(--font-android);
+}
+
+main h2{
+    font-family: var(--font-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+main strong{
+    color: var(--cor3);
+    font-weight: bold;
+    
+}
+main a{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--cor1);
+    color: var(--cor5);
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor3);
+}
+main img{
+    width:100%
+}
+
+main img.pequena{
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+/*##### FIM DO MAIN  ####*/
+footer{
+    background-color: var(--cor4);
+    color: white;
+}
+/* slider*/
+
+.galeria{
+    margin:auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.foto{
+    position: absolute;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration:20s;
+    animation-iteration-count:infinite ;
+}
+@keyframes animacao {
+    25%{
+       opacity: 1; 
+       transform:scale(1.1,1.1);
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.foto:nth-child(1){
+    animation-delay: 0s;
+}
+.foto:nth-child(2){
+    animation-delay: 5s;
+}
+.foto:nth-child(3){
+    animation-delay: 10s;
+}
+.foto:nth-child(4){
+    animation-delay: 15s;
+}
+.foto:nth-child(5){
+    animation-delay: 20s;
+}
+.cards{
+    width: 100%;
+    display: block;
+    background-color: #eeea;
+    padding-bottom: 10px;  
+}
+.cards .container{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    column-gap:30px;
+    row-gap: 10px;
+    padding:20px 30px;
+    
+}
+
+.cards .container figure{
+    padding: 10px;
+    background-color: #fff;
+    transition: .2s;
+    cursor: pointer;
+}
+.cards .container figure:hover{
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,.4);
+    margin-top: -3px;
+}
+.fotos{
+    padding: 10px;
+    width: auto;
+    height: 80px;
+}
+
+.cards .container figure img{
+    width: 100%;
+}
+
+.cards .container figure figcaption{
+    font-size: 1.5rem;
+    color: #888;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cards .container figure p{
+    text-align: center;
+    font-size: 1.1rem;
+    line-height:30px;
+    color:#999 ;
+    padding: 20px;
+}
+
+.cards .container figure:hover{
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,.4);
+    margin-top: -3px;
+}
+
+.cards .container figure a{
+    display:block;
+    width: 100px;
+    min-width: 100px;
+    margin: 15px auto;
+    color: #666;
+    font-weight: bold;
+    background-image: linear-gradient(-10deg, #ddd, #fff,#ddd);
+    padding:10px 15px;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    border: .5px solid #ddd;
+}
+
