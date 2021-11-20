@@ -181,7 +181,7 @@ aside h3{
     background-color: var(--cor4);
     color: white;
     padding: 10px;
-    margin: -10px -10px 0px 0px;   
+    margin: -10px -10px 0px -10px;   
 }
 aside ul{
     list-style-type: '\2714\00a0\00a0';
