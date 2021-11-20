@@ -108,10 +108,13 @@ main{
 main  h1{
     color: var(--cor4);
     font-family: var(--font-android);
+    font-weight: normal;
+
 }
 
 main h2{
     font-family: var(--font-android);
+    font-weight: normal;
     color: var(--cor4);
     font-size: 1.3em;
     background-image: linear-gradient(to right, var(--cor1), transparent);
@@ -155,7 +158,8 @@ div.video{
     background-color: var(--cor1);
     padding: 20px;
     padding-bottom: 56.5%;
-    position: relative;margin: 0px -20px 30px -20px;
+    position: relative;
+    margin: 0px -20px 30px -20px;
     
 }
 
